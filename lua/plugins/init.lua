@@ -13,16 +13,28 @@ return {
     end,
   },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
+--  { import = "nvchad.blink.lazyspec" },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
-}
+  {
+   	"nvim-treesitter/nvim-treesitter",
+   	opts = {
+   		ensure_installed = {
+   			"vim", "lua", "vimdoc",
+        "html", "css"
+      },
+    },
+  },
+
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "clangd",
+        "clang-format",
+        "lua-language-server",
+        "stylua",
+        "rust-analyzer",
+      },
+    },
+  },
+ }
